@@ -17,10 +17,6 @@ app.use(express.static('public'));
 
 mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/populatedb", { useNewUrlParser: true });
 
-db.on("error", error => {
-  console.log("Database Error:", error);
-});
-
 app.use(require('./routes'));
 
 app.listen(PORT, () => {
