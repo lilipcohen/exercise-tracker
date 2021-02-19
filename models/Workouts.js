@@ -7,14 +7,14 @@ const WorkoutsSchema = new Schema({
     type: Date,
     default: Date.now
   },
-  exercises: {
+  exercises: [{
     type: {type: String},
     name: {type: String},
     duration: {type: Number},
     weight: {type: Number},
     reps: {type: Number},
     sets: {type: Number}
-  }
+  }]
 });
     //add virtual
 const Workouts = mongoose.model("Workouts", WorkoutsSchema);
