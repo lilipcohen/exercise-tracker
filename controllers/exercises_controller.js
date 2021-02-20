@@ -2,15 +2,16 @@ const db = require('../models');
 module.exports = {
 getWorkouts:  (req, res) => {
     db.Workouts.find({})
-    .then(dbWorkout=> {
+        .then(dbWorkout => {
+        console.log(dbWorkout)
       res.json(dbWorkout);
     })
     .catch(err => {
       res.json(err);
     });
 },
-createWorkout: ({ body }, res) => {
-  db.Workouts.create(body)
+createWorkout: (req, res) => {
+    db.Workouts.create({})
     .then(dbWorkout => {
       res.json(dbWorkout);
     })
@@ -18,14 +19,15 @@ createWorkout: ({ body }, res) => {
       res.json(err);
     });
 },
-updateWorkout: (req, res) => {
-    db.Workouts.updateOne({_id: req.params.id})
+    updateWorkout: (req, res) => {
+        console.log(req.body)
+        db.Workouts.findOneAndUpdate({ _id: req.params.id }, { $push: { exercises: req.body }} , { new: true })
     .then(dbWorkout => {
       res.json(dbWorkout);
     })
     .catch(err => {
       res.json(err);
-    })
+    });
 },
 deleteWorkout: (req, res) => {
     db.Workouts.remove({_id: req.params.id})
