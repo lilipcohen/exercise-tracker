@@ -1,6 +1,6 @@
 const db = require('../models');
 module.exports = {
-getpage:  (req, res) => {
+getWorkouts:  (req, res) => {
     db.Workouts.find({})
     .then(dbWorkout=> {
       res.json(dbWorkout);
@@ -9,14 +9,32 @@ getpage:  (req, res) => {
       res.json(err);
     });
 },
-createWorkout: (req, res) => {
-    db.Workouts.create({})
-    .then(dbWorkout=> {
+createWorkout: ({ body }, res) => {
+  db.Workouts.create(body)
+    .then(dbWorkout => {
       res.json(dbWorkout);
     })
     .catch(err => {
       res.json(err);
     });
 },
+updateWorkout: (req, res) => {
+    db.Workouts.updateOne({_id: req.params.id})
+    .then(dbWorkout => {
+      res.json(dbWorkout);
+    })
+    .catch(err => {
+      res.json(err);
+    })
+},
+deleteWorkout: (req, res) => {
+    db.Workouts.remove({_id: req.params.id})
+    .then(dbWorkout => {
+      res.json(dbWorkout);
+    })
+    .catch(err => {
+      res.json(err);
+    })
+}
 
 }
