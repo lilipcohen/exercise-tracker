@@ -18,13 +18,13 @@
 
 _Steps required to install project and get the development environment established:_
 
-- Simply use the npm install command in your terminal to install all necessary packages to launch our plant based application!
+- Simply use the npm install command in your terminal to install all necessary packages to launch the exercise based application!
 
 ## Usage
 
 _Instructions and examples for use:_
 
-- On the home page you will be presented with 3 items.
+- On the home page you will be presented with 4 items.
 
 1. Latest Workout
    1. This will be presented on your screen displaying your latest workout.
@@ -44,7 +44,7 @@ _Instructions and examples for use:_
 
 ## Credits
 
-- Built & designed by Tomara Petty, Markos Escalante, Lili Cohen and Kat Nguyen.
+- Built by Lili Cohen.
 
 ## Test
 
