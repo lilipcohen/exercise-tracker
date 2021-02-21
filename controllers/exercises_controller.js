@@ -1,8 +1,10 @@
 const db = require('../models');
 module.exports = {
 getWorkouts:  (req, res) => {
-    db.Workouts.find({})
-        .then(dbWorkout => {
+    db.Workouts.find({
+        // $addFields: { "totalDuration": duration }
+      })
+      .then(dbWorkout => {
         console.log(dbWorkout)
       res.json(dbWorkout);
     })
