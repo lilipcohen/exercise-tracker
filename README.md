@@ -14,6 +14,12 @@
 - [Tests](#tests)
 - [Questions](#questions)
 
+## Description
+
+_Overview of this project:_
+
+- I set out to build an application that allows user's to log their exercises and be able to track their weekly workout routines through visual statistics.
+
 ## Installation
 
 _Steps required to install project and get the development environment established:_
