@@ -35,4 +35,5 @@ _Instructions and examples for use:_
 4. Dashboard
    1. This is where you can visually see all the exercises and workouts you have entered and performed through graphs and other statistics.
 
-<iframe src="https://giphy.com/embed/iuiKnuJOnlFtUukyRI" width="480" height="320" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p><a href="https://giphy.com/gifs/iuiKnuJOnlFtUukyRI"></a></p>
+<img src="./public/img/home-page.png">
+<img src="./public/img/dashboard.png">
